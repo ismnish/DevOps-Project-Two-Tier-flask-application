@@ -13,7 +13,8 @@ pipeline {
         }
         stage('Deploy with Docker Compose') {
             steps {
-                sh 'docker compose down || true'
+                sh 'docker compose down --remove-orphans || true'
+                sh 'docker rm -f mysql two-tier-app || true'
                 sh 'docker compose up -d --build'
             }
         }
