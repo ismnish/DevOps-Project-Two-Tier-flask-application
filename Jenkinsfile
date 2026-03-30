@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/ismnish/DevOps-Project-Two-Tier-Flask-App.git'
+                git branch: 'main', url: 'https://github.com/ismnish/DevOps-Project-Two-Tier-Flask-Application.git'
             }
         }
         stage('Build Docker Image') {
